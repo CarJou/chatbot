@@ -1,22 +1,23 @@
-import React from 'react';
+import React from "react";
+import Home from "./components/Home";
+import Chat from "./components/Chat";
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    //useHistory 
-} from 'react-router-dom';
-
-import Home from './components/Home';
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useHistory,
+} from "react-router-dom";
 
 const Routes = () => {
-    return ( 
-        <Router>
-            <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route exact path="/chat" />
-            </Switch>
-        </Router>
-     );
-}
- 
+  const history = useHistory();
+  return (
+    <Router>
+      <Switch history={history}>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/chat" component={Chat} />
+      </Switch>
+    </Router>
+  );
+};
+
 export default Routes;
