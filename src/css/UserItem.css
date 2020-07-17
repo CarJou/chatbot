@@ -1,0 +1,22 @@
+.user-item-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.user-item-container label {
+  font-size: 14px;
+  color: black;
+  background-color: #e08b97;
+  border-radius: 5px;
+  width: fit-content;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 10px 5px 0;
+  font-weight: bold;
+}
+
+.user-item-container img {
+  height: 50px;
+}

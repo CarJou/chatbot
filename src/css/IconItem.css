@@ -1,0 +1,27 @@
+.icon-container {
+  display: flex;
+  max-width: 90%;
+}
+
+.icon-container img {
+  height: 50px;
+}
+
+.icon-item-messages {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.icon-container label {
+  margin: 0 0 5px 10px;
+  font-size: 14px;
+  color: #fafafa;
+  background-color: purple;
+  padding: 10px;
+  border-radius: 5px;
+  width: fit-content;
+  box-sizing: border-box;
+  font-weight: bold;
+}

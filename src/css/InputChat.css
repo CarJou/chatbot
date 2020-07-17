@@ -1,0 +1,36 @@
+.chat-input-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-input-container input {
+  width: 80%;
+  border: 1px solid purple;
+  color: purple;
+  background-color: #fddcd4;
+  height: 35px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+}
+
+.chat-input-container input::placeholder {
+  color: purple;
+  font-size: 14px;
+}
+
+.chat-input-container button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid purple;
+  background: #ffefeb;
+  background-image: url("../assets/images/send.png");
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.16);
+}
