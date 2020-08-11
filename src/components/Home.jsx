@@ -13,12 +13,14 @@ const Home = ({ history }) => {
       <Icon />
       <div class="content-center">
         <Fade>
-          <h1>No estás sola!</h1>
+          <h1 className="titulo">No estás sola!</h1>
         </Fade>
         <Fade>
-          <p>
-            Si sufrís violencia de género y no podés hablar por teléfono,
-            escribinos. Podemos asesorarte, asistirte y contenerte.
+          <p className="subtitulo">
+            Si sufrís violencia de género, escribinos.
+          </p>
+          <p className="subtitulo">
+            Podemos asesorarte, asistirte y contenerte.
           </p>
         </Fade>
 

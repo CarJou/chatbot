@@ -25,6 +25,13 @@ div.content-center {
   align-items: center;
   margin-bottom: auto;
 }
+h1.titulo {
+  font-weight: bold;
+}
+p.subtitulo {
+  line-height: 10px;
+}
+
 button.primary {
   background-color: #46b65e;
   border-color: #46b65e;
@@ -41,7 +48,7 @@ h3.Footer {
   text-align: center;
   color: purple;
   background-image: none;
-  height: 20px;
+  height: 10px;
   font-size: medium;
   bottom: 0;
   position: static;
