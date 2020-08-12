@@ -7,8 +7,9 @@ body {
 }
 
 img.girl {
-  width: 65%;
-  height: 65%;
+  transform-origin: 0px 0px;
+  width: 50%;
+  height: 50%;
   max-width: 1280px;
   margin: auto;
   display: flex;

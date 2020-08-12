@@ -1,0 +1,35 @@
+.user-item-container img {
+  height: 50px;
+}
+
+.select-content {
+  position: absolute;
+  width: 80%;
+  height: fit-content;
+  background: #e08b97;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  padding: 15px 0 10px 15px;
+  margin: 10px 0 10px auto;
+}
+
+.select-options {
+  background: #b8717a;
+  width: 90%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 5px 5px 5px 10px;
+  margin-bottom: 5px;
+}
+.select-options:hover {
+  background: #914a53;
+}
