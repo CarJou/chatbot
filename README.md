@@ -1,1 +1,1 @@
-![ScreenShot](https://raw.github.com/CarlaJoumier/chatbot/master/src/assets/git.png)
+![ScreenShot](https://raw.github.com/CarlaJoumier/chatbot/master/assets/git.png)
