@@ -1,11 +1,12 @@
 import React from "react";
 import Home from "./components/Home";
 import Chat from "./components/Chat";
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useHistory,
+  useHistory
 } from "react-router-dom";
 
 const Routes = () => {

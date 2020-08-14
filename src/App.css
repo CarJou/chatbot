@@ -53,7 +53,7 @@ h3.Footer {
   background-image: none;
   height: 10px;
   font-size: medium;
-  bottom: 0;
+  margin-bottom: auto;
   position: static;
   line-height: 9;
 }

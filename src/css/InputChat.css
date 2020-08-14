@@ -10,13 +10,14 @@
   margin: auto;
   border: 1px solid purple;
   color: purple;
-  background-color: #fddcd4;
+  background-color: #f2dcd7;
   height: 35px;
   padding-left: 20px;
   box-sizing: border-box;
   border-radius: 25px;
   outline: none;
   font-size: 14px;
+  box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.16);
 }
 
 .chat-input-container input::placeholder {
@@ -31,7 +32,7 @@
   border-radius: 50%;
   outline: none;
   border: 1px solid purple;
-  background: #ffefeb;
+  background: #f2dcd7;
   background-image: url("../assets/images/send.png");
   background-size: 16px;
   background-repeat: no-repeat;

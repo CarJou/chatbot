@@ -1,6 +1,6 @@
 import React from "react";
 import Icon from "./Icon";
-//import Footer from "./Footer";
+
 import Fade from "react-reveal";
 import Jump from "react-reveal/Jump";
 
