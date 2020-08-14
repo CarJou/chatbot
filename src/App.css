@@ -43,6 +43,8 @@ button.primary {
   font-size: medium;
   font-weight: bold;
   color: #fafafa;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 h3.Footer {

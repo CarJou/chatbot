@@ -20,7 +20,8 @@ export let map = [
   {
     msg: [
       "Hay un Centro Integral de la Mujer (CIM) en cada comuna de la Ciudad. Seguro tenés uno cerca de tu casa.",
-      "https://epok.buenosaires.gob.ar/pub/mapa/secretariageneral/compromiso_centros_integrales_de_la_mujer/",
+      "https://epok.buenosaires.gob.ar/pub/mapa/secretariageneral/compromiso_centros_integrales_de_la_mujer",
+
       "En los CIM, las mujeres que sufren violencia de género reciben asistencia psicológica 💬, asesoramiento legal ⚖️ y talleres de reflexión 📚 en forma gratuita.",
       "Recordá que, por el aislamiento social, preventivo y obligatorio, los CIM sólo están atendiendo por mail 📧 o teléfono 📞, de lunes a viernes, de 10 a 16 h."
     ]

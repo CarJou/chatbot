@@ -5,13 +5,13 @@ import UserItem from "./UserItem";
 import InputChat from "./InputChat";
 import Select from "./Select";
 import { info, map } from "../data/Actions";
+import Fade from "react-reveal/Fade";
+import woman from "../assets/images/woman.png";
 
 const Chat = () => {
   let idCounter = 0;
 
   const [msg, setMsg] = useState({});
-
-  const [openSelect, setOpenSelect] = useState(false);
 
   const [chat, setChat] = useState([
     {
@@ -20,6 +20,7 @@ const Chat = () => {
       msg: ["Hola!", " Cuál es tu nombre?"]
     }
   ]);
+  const [openSelect, setOpenSelect] = useState(false);
 
   function firstResponse(name) {
     let newChat = {
@@ -29,7 +30,7 @@ const Chat = () => {
       msg: [
         name +
           ", si estás en una emergencia llamá de inmediato al 911. De lo contrario, elegí una opcion para que podamos ayudarte o asesorarte :)",
-        "Soy un bot en desarrollo, eso quiere decir que aun no estoy preparada para preguntas especificas. Lo que no significa que no pueda ayudarte"
+        "Soy un bot en desarrollo, eso quiere decir que no estoy preparada para preguntas específicas. Lo que no significa que no pueda asesorarte"
       ]
     };
     //actualizo mi estado de chat
@@ -38,15 +39,17 @@ const Chat = () => {
     }
   }
   //espera una funcion anonima y un efecto
+  //cuando el chat tiene dos objetos automaticamente  recibe una funcion anonima
+
   useEffect(() => {
-    //cuando el chat tiene dos objetos automaticamente  recibe una funcion anonima
-    if (chat.length === 2) {
-      setTimeout(() => firstResponse(msg.msg), 500);
-      setMsg({ ...msg, msg: " " });
-      setTimeout(() => setOpenSelect(true, 600));
+    switch (chat.length) {
+      case 2:
+        setTimeout(() => firstResponse(msg.msg), 500);
+        setMsg({ ...msg, msg: "" });
+        setTimeout(() => setOpenSelect(true), 600);
+        break;
     }
   }, [chat]);
-
   function getMessage(value) {
     idCounter = idCounter + 1;
     setMsg({
@@ -62,8 +65,6 @@ const Chat = () => {
     //"push al array de objeto"
     setChat([...chat, msg]);
   }
-  console.log("chat:", chat);
-  console.log("msg:", msg);
 
   let options = [
     { id: "Denuncia", text: "Como denunciar en cuarentena" },
@@ -92,29 +93,53 @@ const Chat = () => {
         console.log("no hay valores");
     }
   }
-  console.log("interactions", interactions);
+
   return (
     <div className="chatbot-chat-container">
       <div className="chatbot-chat-content">
         <div className="chatbot-chat">
           <div className="chatbot-chat-container-body">
-            {chat.map((message, index) =>
-              message.emmiter === "Woman" ? (
-                <IconItem key={index} text={message.msg} />
-              ) : (
-                <UserItem key={index} text={message.msg} />
-              )
-            )}
-
-            {openSelect && (
-              <Select
-                handleSelectedOptions={handleSelectedOptions}
-                options={options}
-              />
-            )}
+            <div className="chatbot-chat-body">
+              {chat.map((message, index) =>
+                message.emmiter === "Woman" ? (
+                  <IconItem key={index} text={message.msg} />
+                ) : (
+                  <UserItem key={index} text={message.msg} />
+                )
+              )}
+              {openSelect && (
+                <>
+                  {" "}
+                  <Fade right>
+                    <Select
+                      handleSelectedOptions={handleSelectedOptions}
+                      options={options}
+                    />{" "}
+                  </Fade>
+                </>
+              )}
+              {interactions.length > 0 &&
+                interactions.map((interaction, index) => (
+                  <>
+                    <Fade left>
+                      <IconItem key={index} text={interaction} />
+                    </Fade>
+                    <Fade right>
+                      <div className="chatbot-chat-select-container">
+                        <Select
+                          handleSelectedOptions={handleSelectedOptions}
+                          options={options}
+                        />
+                        <img src={woman} alt="woman icon" />
+                      </div>
+                    </Fade>
+                  </>
+                ))}
+            </div>
           </div>
           <div className="chatbot-chat-container-input">
             <InputChat
+              chat={chat}
               msg={msg}
               getMessage={getMessage}
               sendMessage={sendMessage}

@@ -1,11 +1,13 @@
 .chat-input-container {
   width: 100%;
+  height: 10%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .chat-input-container input {
-  width: 80%;
+  width: 82%;
+  margin: auto;
   border: 1px solid purple;
   color: purple;
   background-color: #fddcd4;
@@ -25,12 +27,15 @@
 .chat-input-container button {
   width: 35px;
   height: 35px;
+  margin-bottom: -30px;
   border-radius: 50%;
+  outline: none;
   border: 1px solid purple;
   background: #ffefeb;
   background-image: url("../assets/images/send.png");
   background-size: 16px;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
   box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.16);
 }

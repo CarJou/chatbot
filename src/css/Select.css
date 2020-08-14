@@ -1,14 +1,21 @@
-.user-item-container img {
+/*
+}
+.select-content {
+  position: absolute;*/
+.chatbot-chat-select-container img {
   height: 50px;
 }
-
+.select-container {
+  width: 100%;
+  height: auto;
+  margin: 0 10px 5px 0;
+}
 .select-content {
-  position: absolute;
   width: 80%;
   height: fit-content;
-  background: #e08b97;
   border-radius: 5px;
   box-sizing: border-box;
+  background-color: #b19196;
   display: flex;
   padding: 15px 0 10px 15px;
   margin: 10px 0 10px auto;
@@ -23,13 +30,14 @@
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-
+  margin: auto;
   display: flex;
   flex-direction: column;
-
-  padding: 5px 5px 5px 10px;
+  text-align: left;
+  padding: 5px 5px 5px 7px;
   margin-bottom: 5px;
 }
+
 .select-options:hover {
   background: #914a53;
 }

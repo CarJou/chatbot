@@ -1,12 +1,14 @@
 import React from "react";
 import "../css/InputChat.css";
 
-const InputChat = ({ sendMessage, getMessage, msg }) => {
+const InputChat = ({ sendMessage, getMessage, msg, chat }) => {
   return (
-    <form onSubmit={(e) => sendMessage(e)} className="chat-input-container">
+    <form className="chat-input-container" onSubmit={(e) => sendMessage(e)}>
       <input
-        placeholder="Escribi tu nombre"
-        //reseteo el dato
+        disabled={chat.length >= 3 ? true : false}
+        placeholder={
+          chat.length >= 3 ? "Ya no podés escribir..." : "Escribí tu nombre"
+        }
         value={msg.msg}
         type="text"
         onChange={(e) => getMessage(e.target.value)}
