@@ -8,9 +8,9 @@
 .chat-input-container input {
   width: 82%;
   margin: auto;
-  border: 1px solid purple;
-  color: purple;
-  background-color: #f2dcd7;
+  border: 1px solid #ff9800;
+  color: black;
+  background-color: #ffefeb;
   height: 35px;
   padding-left: 20px;
   box-sizing: border-box;
@@ -21,7 +21,7 @@
 }
 
 .chat-input-container input::placeholder {
-  color: purple;
+  color: black;
   font-size: 14px;
 }
 
@@ -31,8 +31,8 @@
   margin-bottom: -30px;
   border-radius: 50%;
   outline: none;
-  border: 1px solid purple;
-  background: #f2dcd7;
+  border: 1px solid #ff9800;
+  background: #ffefeb;
   background-image: url("../assets/images/send.png");
   background-size: 16px;
   background-repeat: no-repeat;

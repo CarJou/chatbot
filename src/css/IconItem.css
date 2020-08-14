@@ -19,8 +19,8 @@
 .icon-container label {
   margin: 0 0 5px 10px;
   font-size: 14px;
-  color: #fafafa;
-  background-color: purple;
+  color: black;
+  background-color: #ffe0b2;
   padding: 10px;
   border-radius: 5px;
   width: fit-content;

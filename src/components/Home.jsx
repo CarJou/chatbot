@@ -19,9 +19,7 @@ const Home = ({ history }) => {
           <p className="subtitulo">
             Si sufrís violencia de género, escribinos.
           </p>
-          <p className="subtitulo">
-            Podemos asesorarte, asistirte y contenerte.
-          </p>
+          <p className="subtitulo">Podemos asesorarte y asistirte.</p>
           <p className="subtitulo">
             <strong> Si estás en una emergencia llamá al 911.</strong>
           </p>{" "}

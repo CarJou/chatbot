@@ -1,3 +1,30 @@
-h3.Footer {
-  color: purple;
+div.nav-container {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  height: 45px;
+  background-color: #fcd4c9;
+}
+button.return {
+  width: 40px;
+  height: 40px;
+  margin: 25px;
+  margin-top: auto;
+  margin-right: auto;
+  border: 1px solid #ff9800;
+  background: #ffcc80;
+  border-radius: 50%;
+  outline: none;
+  background-image: url("../assets/images/return.png");
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+p.Dev {
+  font-size: 12px;
+  height: 40px;
+  margin: 20px;
+  margin-left: auto;
+  font-weight: bold;
 }

@@ -46,14 +46,3 @@ button.primary {
   margin-top: 15px;
   margin-bottom: 30px;
 }
-
-h3.Footer {
-  text-align: center;
-  color: purple;
-  background-image: none;
-  height: 10px;
-  font-size: medium;
-  margin-bottom: auto;
-  position: static;
-  line-height: 9;
-}
