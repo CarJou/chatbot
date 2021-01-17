@@ -12,7 +12,6 @@ const Chat = () => {
   let idCounter = 0;
 
   const [msg, setMsg] = useState({});
-
   const [chat, setChat] = useState([
     {
       id: 0,

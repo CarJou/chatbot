@@ -8,7 +8,7 @@ body {
 
 img.girl {
   transform-origin: 0px 0px;
-  width: 50%;
+  width: 30%;
   height: 50%;
   max-width: 1280px;
   margin: auto;
@@ -34,9 +34,9 @@ p.subtitulo {
 }
 
 button.primary {
-  background-color: #46b65e;
-  border-color: #46b65e;
-  border: #46b65e;
+  background-color: rebeccapurple;
+  border-color:  rebeccapurple;
+  border:  rebeccapurple;
   width: 20%;
   padding: 1rem;
   border-radius: 4px;
@@ -45,4 +45,17 @@ button.primary {
   color: #fafafa;
   margin-top: 15px;
   margin-bottom: 30px;
+  cursor: pointer
+}
+button.primary:hover{
+  background-color: #7434b4;
+  border-color:  rebeccapurple;
+  border:  rebeccapurple;
+}
+
+@media screen and (max-width: 700px) {
+  img.girl {
+    width: 80%;
+  }
+  
 }

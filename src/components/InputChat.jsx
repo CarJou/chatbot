@@ -13,7 +13,8 @@ const InputChat = ({ sendMessage, getMessage, msg, chat }) => {
         type="text"
         onChange={(e) => getMessage(e.target.value)}
       />
-      <button type="submit" />
+      {chat.length >=3 ? "" : <button type="submit" />}
+      
     </form>
   );
 };
