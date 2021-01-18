@@ -4,6 +4,7 @@ import "../css/InputChat.css";
 const InputChat = ({ sendMessage, getMessage, msg, chat }) => {
   return (
     <form className="chat-input-container" onSubmit={(e) => sendMessage(e)}>
+      {/*Si el largo del chat es = o mayor a 3 va a ser true*/}
       <input
         disabled={chat.length >= 3 ? true : false}
         placeholder={
@@ -13,7 +14,7 @@ const InputChat = ({ sendMessage, getMessage, msg, chat }) => {
         type="text"
         onChange={(e) => getMessage(e.target.value)}
       />
-      {chat.length >=3 ? "" : <button type="submit" />}
+      {chat.length >= 3 ? "" : <button type="submit" />}
       
     </form>
   );

@@ -8,10 +8,12 @@ import { opA, opB, opC } from "../data/Actions";
 import Fade from "react-reveal/Fade";
 import woman from "../assets/images/woman.png";
 import Nav from "./Nav";
+
 const Chat = () => {
   let idCounter = 0;
-
-  const [msg, setMsg] = useState({});
+  //cada msj es un obejto
+  const [msg, setMsg] = useState({});  
+  const [openSelect, setOpenSelect] = useState(false);
   const [chat, setChat] = useState([
     {
       id: 0,
@@ -19,8 +21,8 @@ const Chat = () => {
       msg: ["Hola!", " Cuál es tu nombre?"]
     }
   ]);
-  const [openSelect, setOpenSelect] = useState(false);
 
+  //se ejecuta cuando tenga que volver a renderizarse porque hay un cambio 
   function firstResponse(name) {
     let newChat = {
       //+2 porque es probable que useeffect no me actualice el contador
@@ -38,8 +40,8 @@ const Chat = () => {
     }
   }
   //espera una funcion anonima y un efecto
-  //cuando el chat tiene dos objetos automaticamente  recibe una funcion anonima
-
+  //cuando el chat tiene dos objetos automaticamente recibe una funcion anonima
+//setMsg -> msg "" para que noa aprezca el nombre en el input una vez enviado
   useEffect(() => {
     switch (chat.length) {
       case 2:
@@ -49,6 +51,9 @@ const Chat = () => {
         break;
     }
   }, [chat]);
+
+  //recibe valor con id
+  //
   function getMessage(value) {
     idCounter = idCounter + 1;
     setMsg({
@@ -58,10 +63,10 @@ const Chat = () => {
     });
   }
 
-  //evita que se refresque la pantalla
+  //InputChat. (e) Evita que se refresque la pantalla
   function sendMessage(e) {
     e.preventDefault();
-    //"push al array de objeto"
+    //Actualiza array de objeto
     setChat([...chat, msg]);
   }
 
@@ -108,6 +113,7 @@ const Chat = () => {
           <div className="chatbot-chat">
             <div className="chatbot-chat-container-body">
               <div className="chatbot-chat-body">
+                {/* se necesita index para iterar */}
                 {chat.map((message, index) =>
                   message.emmiter === "Woman" ? (
                     <IconItem key={index} text={message.msg} />
@@ -126,6 +132,7 @@ const Chat = () => {
                     </Fade>
                   </>
                 )}
+                {/* +0 xa ya no es un array vacio */}
                 {interactions.length > 0 &&
                   interactions.map((interaction, index) => (
                     <>
@@ -135,6 +142,7 @@ const Chat = () => {
                       <Fade right>
                         <div className="chatbot-chat-select-container">
                           <Select
+                            key={index}
                             handleSelectedOptions={handleSelectedOptions}
                             options={options}
                           />

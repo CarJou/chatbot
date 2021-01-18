@@ -1,7 +1,6 @@
 import React from "react";
 import Home from "./components/Home";
 import Chat from "./components/Chat";
-
 import {
   BrowserRouter as Router,
   Switch,
